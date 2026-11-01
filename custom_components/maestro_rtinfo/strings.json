@@ -1,0 +1,1 @@
+{"title":"Maestro MCZ - Información adicional","config":{"step":{"user":{"title":"Cuenta Maestro MCZ","description":"Selecciona la integración existente que suministra los datos.","data":{"source_entry_id":"Integración Maestro MCZ"}}},"abort":{"no_source":"No hay cuentas Maestro MCZ disponibles o ya están añadidas.","already_configured":"Esta cuenta ya está configurada."}}}

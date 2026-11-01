@@ -1,0 +1,10 @@
+{
+  "domain": "maestro_rtinfo",
+  "name": "Maestro MCZ - Información adicional",
+  "version": "0.1.0",
+  "config_flow": true,
+  "dependencies": ["maestro_mcz"],
+  "documentation": "https://github.com/Robbe-B/maestro_mcz",
+  "iot_class": "cloud_polling",
+  "codeowners": []
+}
