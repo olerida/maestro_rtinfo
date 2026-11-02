@@ -11,5 +11,5 @@
   "documentation": "https://github.com/olerida/maestro_rtinfo",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/olerida/maestro_rtinfo/issues",
-  "version": "0.2.1"
+  "version": "0.2.2"
 }

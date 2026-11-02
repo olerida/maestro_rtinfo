@@ -4,7 +4,7 @@ from homeassistant.helpers import entity_registry as er
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from .const import DOMAIN, SOURCE_DOMAIN
-from .fields import CONFIRMED_FIELDS, LABELS, snapshot
+from .fields import CONFIRMED_FIELDS, ICONS, LABELS, snapshot
 
 
 async def setup_sensors(hass, entry, async_add_entities, entity_class, boolean):
@@ -41,6 +41,7 @@ class ExtraEntity(CoordinatorEntity):
         self._stove = stove
         self._key = key
         self._attr_unique_id = f"{stove.UniqueCode}-{key}"
+        self._attr_icon = ICONS.get(key, "mdi:help-circle-outline")
         self._attr_entity_registry_enabled_default = key in CONFIRMED_FIELDS
         if key in LABELS:
             self._attr_translation_key = key

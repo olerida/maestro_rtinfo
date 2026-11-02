@@ -18,6 +18,28 @@ CONFIRMED_FIELDS = frozenset({
     "vel_imp_ventola_fumi", "vel_real_coclea", "vel_imp_coclea",
     "temp_caldaia", "temp_bollitore", "temp_puffer",
 })
+ICONS = {
+    "pos_ric_flu": "mdi:tune-variant", "pos_ric_pel": "mdi:grain",
+    "mod_ada_on": "mdi:autorenew", "adaptive_on": "mdi:autorenew",
+    "pul_brac": "mdi:broom", "att_eco": "mdi:leaf",
+    "ingr_amb": "mdi:thermostat", "sens_liv_pellet": "mdi:grain",
+    "potenza_att": "mdi:fire", "set_pot_man": "mdi:fire",
+    "potenza_counter": "mdi:timer-outline", "state_duration": "mdi:timer-outline",
+    "t_dur_pul": "mdi:timer-cog-outline", "t_int_pul": "mdi:timer-sand",
+    "pressione": "mdi:gauge", "pressione_imp": "mdi:gauge",
+    "state": "mdi:fireplace", "mode": "mdi:tune-variant",
+    "is_connected": "mdi:connection", "is_in_error": "mdi:alert-circle-outline",
+    "last_alarm": "mdi:alert-circle-outline", "crono_enabled": "mdi:calendar-clock",
+    "silent_enabled": "mdi:volume-off", "sleep_enabled": "mdi:sleep",
+    "clean_in_prog": "mdi:broom", "clean_air_in_prog": "mdi:air-filter",
+    "ore_prox_manut": "mdi:wrench-clock",
+    "index_vel_v1": "mdi:fan", "index_vel_v2": "mdi:fan", "index_vel_v3": "mdi:fan",
+    "set_amb1": "mdi:thermometer", "set_amb2": "mdi:thermometer", "set_amb3": "mdi:thermometer",
+    "temp_fumi": "mdi:thermometer", "temp_scheda": "mdi:thermometer",
+    "temp_caldaia": "mdi:thermometer", "temp_bollitore": "mdi:thermometer", "temp_puffer": "mdi:thermometer",
+    "vel_real_ventola_fumi": "mdi:fan", "vel_imp_ventola_fumi": "mdi:fan",
+    "vel_real_coclea": "mdi:screw-lag", "vel_imp_coclea": "mdi:screw-lag",
+}
 LABELS = {
     "pos_ric_flu": ("Receta activo", None, None),
     "pos_ric_pel": ("Receta pellet", None, None),

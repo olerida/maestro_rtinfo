@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- Add meaningful icons to identified entities and a neutral icon for undocumented fields.
+
 ## 0.2.1
 
 - Add MIT license and correct manifest metadata for publication.
