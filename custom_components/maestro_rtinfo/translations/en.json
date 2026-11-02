@@ -13,6 +13,9 @@
     "abort": {
       "no_source": "No available Maestro MCZ accounts, or all are already added.",
       "already_configured": "This account is already configured."
+    },
+    "error": {
+      "source_unavailable": "The selected Maestro MCZ integration is not loaded or has no stoves available."
     }
   },
   "entity": {

@@ -6,6 +6,9 @@
 
 Maestro MCZ Extra Sensors es una integración personalizada de solo lectura para [Home Assistant](https://www.home-assistant.io/) que muestra datos adicionales de estufas [MCZ Maestro](https://www.mcz.it/es/tecnologia-maestro). Utiliza la integración existente [Maestro MCZ](https://github.com/Robbe-B/maestro_mcz) para crear entidades con datos como la temperatura de humos, el estado de funcionamiento o la limpieza del brasero.
 
+
+La integración sigue en fase beta. Consulta la [revisión de calidad de bronce](docs/bronze-review.md) para conocer lo realizado y lo pendiente; no es una clasificación oficial.
+
 ## Dispositivos compatibles
 
 La integración se ha instalado en Home Assistant 2026.10.4 con Maestro MCZ 0.6.7-beta y una estufa MCZ Ego Comfort Air con firmware M2S.AIR.24.20. No se han validado todas las entidades ni todos los estados. Otros modelos y versiones pueden ofrecer campos diferentes y aún no se han comprobado.

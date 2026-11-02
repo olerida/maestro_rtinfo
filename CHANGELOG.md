@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.3
+
+- Store source coordinators in config entry runtime data and validate the selected source during setup.
+- Add account selection and setup tests, and document a preliminary Bronze quality assessment.
+
 ## 0.2.2
 
 - Add meaningful icons to identified entities and a neutral icon for undocumented fields.

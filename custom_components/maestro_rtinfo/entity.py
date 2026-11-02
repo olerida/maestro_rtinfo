@@ -3,12 +3,12 @@ from homeassistant.core import callback
 from homeassistant.helpers import entity_registry as er
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
-from .const import DOMAIN, SOURCE_DOMAIN
+from .const import SOURCE_DOMAIN
 from .fields import CONFIRMED_FIELDS, ICONS, LABELS, snapshot
 
 
 async def setup_sensors(hass, entry, async_add_entities, entity_class, boolean):
-    sources = hass.data[DOMAIN][entry.entry_id]
+    sources = entry.runtime_data
     for coordinator, stove in sources:
         known = set()
         serial = stove.UniqueCode

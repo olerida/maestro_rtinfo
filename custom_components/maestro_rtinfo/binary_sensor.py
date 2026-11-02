@@ -1,6 +1,6 @@
 """Additional boolean values."""
 from homeassistant.components.binary_sensor import BinarySensorEntity
-from .entities import ExtraEntity, setup_sensors
+from .entity import ExtraEntity, setup_sensors
 from .fields import snapshot
 
 

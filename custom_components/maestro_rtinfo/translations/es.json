@@ -13,6 +13,9 @@
     "abort": {
       "no_source": "No hay cuentas Maestro MCZ disponibles o ya están añadidas.",
       "already_configured": "Esta cuenta ya está configurada."
+    },
+    "error": {
+      "source_unavailable": "La integración Maestro MCZ seleccionada no está cargada o no tiene estufas disponibles."
     }
   },
   "entity": {

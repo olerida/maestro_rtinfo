@@ -4,7 +4,7 @@ from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryNotReady
 
-from .const import DOMAIN, SOURCE_DOMAIN
+from .const import SOURCE_DOMAIN
 
 PLATFORMS = [Platform.SENSOR, Platform.BINARY_SENSOR]
 
@@ -27,13 +27,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     sources = get_sources(hass, entry.data["source_entry_id"])
     if not sources:
         raise ConfigEntryNotReady("La integración Maestro MCZ debe estar configurada y cargada")
-    hass.data.setdefault(DOMAIN, {})[entry.entry_id] = sources
+    entry.runtime_data = sources
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if await hass.config_entries.async_unload_platforms(entry, PLATFORMS):
-        hass.data[DOMAIN].pop(entry.entry_id, None)
         return True
     return False

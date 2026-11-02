@@ -1,6 +1,6 @@
 """Additional numeric and text values."""
 from homeassistant.components.sensor import SensorDeviceClass, SensorEntity, SensorStateClass
-from .entities import ExtraEntity, setup_sensors
+from .entity import ExtraEntity, setup_sensors
 from .fields import LABELS, snapshot
 
 
