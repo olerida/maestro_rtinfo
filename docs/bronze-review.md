@@ -6,7 +6,7 @@ This is a self-assessment against the [Home Assistant Core quality scale](https:
 | --- | --- |
 | action-setup | Not applicable: no actions are registered. |
 | appropriate-polling | Uses the source coordinator; no additional polling. The source determines the interval. |
-| brands | Pending: a local 256 px icon exists, but assets are not in Home Assistant brands. No submission has been made. |
+| brands | The local `brand/` directory includes the 256 px MCZ icon and logo from the existing Maestro MCZ brand. Local branding is supported for custom integrations since Home Assistant 2026.3. For a formal Core assessment, the domain-specific Core brands requirement still needs review. |
 | common-modules | Base entity is in `entity.py`; no coordinator is implemented here. |
 | config-flow | UI selects an existing account; source availability is checked. |
 | config-flow-test-coverage | Partial: account selection, absent/duplicate account, invalid input and unavailable source/retry are tested using Home Assistant API doubles. Full coverage with the actual Home Assistant test framework and reported coverage remain to be verified. |
@@ -25,4 +25,4 @@ This is a self-assessment against the [Home Assistant Core quality scale](https:
 | test-before-setup | Checks for a source coordinator and retries with ConfigEntryNotReady if absent. It does not independently test the MCZ connection. |
 | unique-config-entry | Source entry ID is used as the unique ID and already selected entries are filtered out. |
 
-The assessment is not a claim that Bronze is achieved. In particular, a formal Core review, official branding, full config-flow coverage in Home Assistant, and the custom dependency's eligibility are unresolved. The integration remains beta.
+The assessment is not a claim that Bronze is achieved. In particular, a formal Core review, Core branding eligibility, full config-flow coverage in Home Assistant, and the custom dependency's eligibility are unresolved. The integration remains beta.

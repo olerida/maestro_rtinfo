@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.4
+
+- Use the MCZ icon and logo from Home Assistant Brands as local custom integration branding.
+- Clarify the branding requirement in the Bronze quality review.
+
 ## 0.2.3
 
 - Store source coordinators in config entry runtime data and validate the selected source during setup.

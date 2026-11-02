@@ -9,6 +9,8 @@ Maestro MCZ Extra Sensors es una integración personalizada de solo lectura para
 
 La integración sigue en fase beta. Consulta la [revisión de calidad de bronce](docs/bronze-review.md) para conocer lo realizado y lo pendiente; no es una clasificación oficial.
 
+La integración incluye el icono y el logotipo de MCZ como marca local para Home Assistant 2026.3 o posterior.
+
 ## Dispositivos compatibles
 
 La integración se ha instalado en Home Assistant 2026.10.4 con Maestro MCZ 0.6.7-beta y una estufa MCZ Ego Comfort Air con firmware M2S.AIR.24.20. No se han validado todas las entidades ni todos los estados. Otros modelos y versiones pueden ofrecer campos diferentes y aún no se han comprobado.
