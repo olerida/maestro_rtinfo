@@ -74,3 +74,7 @@ The integration reads data from the existing Maestro MCZ coordinator and updates
 ## Remove the integration
 
 Open **Settings** → **Devices & services**, select **Maestro MCZ Extra Sensors**, open its menu and select **Delete**. To remove the files as well, delete `custom_components/maestro_rtinfo` and restart Home Assistant. The original Maestro MCZ integration and its account are separate.
+
+## License
+
+The project code is available under the [MIT License](LICENSE). The Maestro+ icon and MCZ trademarks belong to their respective owner and are not covered by the MIT license.

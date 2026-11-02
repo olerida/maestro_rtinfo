@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Add MIT license and correct manifest metadata for publication.
+
 ## 0.2.0
 
 - Disable newly discovered, unconfirmed entities by default; users can enable them in Home Assistant.

@@ -74,3 +74,7 @@ La integración lee los datos del coordinador existente de Maestro MCZ y se actu
 ## Eliminar la integración
 
 Abre **Ajustes** → **Dispositivos y servicios**, selecciona **Maestro MCZ Extra Sensors**, abre su menú y pulsa **Eliminar**. Para borrar también los archivos, elimina `custom_components/maestro_rtinfo` y reinicia Home Assistant. La integración Maestro MCZ original y su cuenta son independientes.
+
+## Licencia
+
+El código del proyecto se distribuye bajo la [licencia MIT](LICENSE). El icono Maestro+ y las marcas MCZ pertenecen a su titular y no están incluidos en la licencia MIT.
