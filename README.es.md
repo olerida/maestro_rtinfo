@@ -1,5 +1,7 @@
 # Maestro MCZ - Sensores adicionales
 
+<img src="custom_components/maestro_rtinfo/brand/icon.png" alt="Maestro MCZ Extra Sensors" width="128">
+
 [English](README.md)
 
 Maestro MCZ Extra Sensors es una integración personalizada de solo lectura para [Home Assistant](https://www.home-assistant.io/) que muestra datos adicionales de estufas [MCZ Maestro](https://www.mcz.it/es/tecnologia-maestro). Utiliza la integración existente [Maestro MCZ](https://github.com/Robbe-B/maestro_mcz) para crear entidades con datos como la temperatura de humos, el estado de funcionamiento o la limpieza del brasero.

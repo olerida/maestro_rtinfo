@@ -1,5 +1,7 @@
 # Maestro MCZ Extra Sensors
 
+<img src="custom_components/maestro_rtinfo/brand/icon.png" alt="Maestro MCZ Extra Sensors" width="128">
+
 [Español](README.es.md)
 
 Maestro MCZ Extra Sensors is a read-only custom integration for [Home Assistant](https://www.home-assistant.io/) that exposes additional data reported by compatible [MCZ Maestro](https://www.mcz.it/en/maestro-technology) stoves. It uses the existing [Maestro MCZ integration](https://github.com/Robbe-B/maestro_mcz) to show information such as exhaust temperature, operating state and brazier cleaning values as entities.
