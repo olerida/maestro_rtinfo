@@ -70,6 +70,9 @@ New entities for fields whose meaning is unconfirmed are disabled by default. To
 
 The integration reads data from the existing Maestro MCZ coordinator and updates when that coordinator updates. It does not make its own cloud requests. The polling interval is controlled by the original integration and may be slower than the Maestro+ app's real-time display.
 
+
+Before setup, the integration checks that at least one source coordinator reports a successful last update. It does not force another cloud request. If all updates failed, configuration reports an error and existing entries retry setup.
+
 ## Known limitations
 
 - This is an independent community project, not an official MCZ integration.

@@ -117,13 +117,13 @@ class FlowTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_account_can_be_selected(self):
         self.assertEqual((await self.flow.async_step_user())["type"], "form")
-        with patch.object(flow_module, "get_sources", return_value=[object()]):
+        with patch.object(flow_module, "get_sources", return_value=[(object(), object())]):
             result = await self.flow.async_step_user({"source_entry_id": "source"})
         self.assertEqual(result["data"], {"source_entry_id": "source"})
         self.assertEqual(self.flow.unique_id, "source")
 
     async def test_unavailable_source_can_be_retried(self):
-        with patch.object(flow_module, "get_sources", side_effect=[[], [object()]]):
+        with patch.object(flow_module, "get_sources", side_effect=[[], [(object(), object())]]):
             result = await self.flow.async_step_user({"source_entry_id": "source"})
             self.assertEqual(result["errors"]["base"], "source_unavailable")
             result = await self.flow.async_step_user({"source_entry_id": "source"})

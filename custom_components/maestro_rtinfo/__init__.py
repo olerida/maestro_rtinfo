@@ -23,10 +23,19 @@ def get_sources(hass: HomeAssistant, entry_id: str):
     return []
 
 
+def sources_ready(sources) -> bool:
+    """Accept sources with at least one successful coordinator update.
+
+    The source integration owns the connection and refresh schedule. Do not
+    force an additional request or require every stove to be online.
+    """
+    return any(getattr(coordinator, "last_update_success", True) for coordinator, _ in sources)
+
+
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     sources = get_sources(hass, entry.data["source_entry_id"])
-    if not sources:
-        raise ConfigEntryNotReady("La integración Maestro MCZ debe estar configurada y cargada")
+    if not sources_ready(sources):
+        raise ConfigEntryNotReady("Maestro MCZ source is unavailable or its last update failed")
     entry.runtime_data = sources
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True

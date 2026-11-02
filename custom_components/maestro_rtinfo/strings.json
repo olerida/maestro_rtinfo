@@ -15,7 +15,7 @@
       "already_configured": "This account is already configured."
     },
     "error": {
-      "source_unavailable": "The selected Maestro MCZ integration is not loaded or has no stoves available."
+      "source_unavailable": "The Maestro MCZ account is unavailable, has no stoves, or its last update failed."
     }
   },
   "entity": {

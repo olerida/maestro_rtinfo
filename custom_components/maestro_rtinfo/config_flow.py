@@ -2,7 +2,7 @@
 import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import callback
-from . import get_sources
+from . import get_sources, sources_ready
 from .const import DOMAIN, SOURCE_DOMAIN
 
 
@@ -20,7 +20,7 @@ class MaestroRtinfoConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             return self.async_abort(reason="no_source")
         if user_input is not None and user_input.get("source_entry_id") in entries:
             source = user_input["source_entry_id"]
-            if not get_sources(self.hass, source):
+            if not sources_ready(get_sources(self.hass, source)):
                 errors["base"] = "source_unavailable"
             else:
                 await self.async_set_unique_id(source)

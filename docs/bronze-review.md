@@ -9,8 +9,8 @@ This is a self-assessment against the [Home Assistant Core quality scale](https:
 | brands | The local `brand/` directory includes the 256 px MCZ icon and logo from the existing Maestro MCZ brand. Local branding is supported for custom integrations since Home Assistant 2026.3. For a formal Core assessment, the domain-specific Core brands requirement still needs review. |
 | common-modules | Base entity is in `entity.py`; no coordinator is implemented here. |
 | config-flow | UI selects an existing account; source availability is checked. |
-| config-flow-test-coverage | Partial: account selection, absent/duplicate account, invalid input and unavailable source/retry are tested using Home Assistant API doubles. Full coverage with the actual Home Assistant test framework and reported coverage remain to be verified. |
-| dependency-transparency | Pending review: Maestro MCZ is an independently distributed custom integration, not a PyPI client library; Core applicability/eligibility is unverified. |
+| config-flow-test-coverage | Verified: isolated Home Assistant 2026.10.4 tests exercise the actual flow manager, including source failure/recovery and duplicate accounts; config_flow.py has 100% line coverage. Maestro MCZ is simulated. CI enforces the flow coverage. |
+| dependency-transparency | The rule covers external Python requirements; this manifest declares none. The separately installed Maestro MCZ integration is an Apache-2.0, open-source custom integration, not a requirement on PyPI. It remains a separate integration dependency and a Core eligibility issue, not resolved by this exception. |
 | docs-actions | Not applicable: no actions. |
 | docs-conditions | Not applicable: no integration-specific conditions. |
 | docs-high-level-description | README describes MCZ and the source integration. |
@@ -21,8 +21,8 @@ This is a self-assessment against the [Home Assistant Core quality scale](https:
 | entity-unique-id | Entities derive a unique ID from the source stove identifier and field key. |
 | has-entity-name | Base entity sets `has_entity_name`; known names use translation keys. |
 | runtime-data | Source references are held in `ConfigEntry.runtime_data`. |
-| test-before-configure | Checks that the selected source provides stove coordinators; it does not independently contact MCZ. Source integration manages authentication and connection. Core exemption/acceptance remains unverified. |
-| test-before-setup | Checks for a source coordinator and retries with ConfigEntryNotReady if absent. It does not independently test the MCZ connection. |
+| test-before-configure | Proposed exemption: no independent connection or credentials; the source integration manages authentication and updates. The flow checks that a source coordinator is present and at least one coordinator reports a successful last update, without making a network request. A successful previous update is not proof of present connectivity; Core review is required. |
+| test-before-setup | Checks that source coordinators exist and at least one reports a successful last update; otherwise raises ConfigEntryNotReady for retry. No extra network requests are made. Source authentication and current connectivity are handled upstream; formal Core applicability is unverified. |
 | unique-config-entry | Source entry ID is used as the unique ID and already selected entries are filtered out. |
 
-The assessment is not a claim that Bronze is achieved. In particular, a formal Core review, Core branding eligibility, full config-flow coverage in Home Assistant, and the custom dependency's eligibility are unresolved. The integration remains beta.
+The assessment is not a claim that Bronze is achieved. In particular, a formal Core review, Core branding eligibility, and the custom dependency's eligibility are unresolved. The integration remains beta.

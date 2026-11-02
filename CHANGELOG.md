@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.5
+
+- Check the source coordinator’s most recent update before setup, without making extra cloud requests; retry when all updates failed.
+- Add isolated Home Assistant 2026.10.4 tests for config flows, recovery, entity discovery and updates; enforce full config-flow line coverage in CI.
+- Document dependency and connection-rule applicability in the Bronze assessment.
+
 ## 0.2.4
 
 - Use the MCZ icon and logo from Home Assistant Brands as local custom integration branding.

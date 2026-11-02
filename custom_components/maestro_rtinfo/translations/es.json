@@ -15,7 +15,7 @@
       "already_configured": "Esta cuenta ya está configurada."
     },
     "error": {
-      "source_unavailable": "La integración Maestro MCZ seleccionada no está cargada o no tiene estufas disponibles."
+      "source_unavailable": "La cuenta de Maestro MCZ no está disponible, no tiene estufas o su última actualización ha fallado."
     }
   },
   "entity": {

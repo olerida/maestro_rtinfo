@@ -70,6 +70,9 @@ Las entidades nuevas correspondientes a campos cuyo significado no se ha confirm
 
 La integración lee los datos del coordinador existente de Maestro MCZ y se actualiza cuando este lo hace. No realiza consultas adicionales a la nube. El intervalo depende de la integración original y puede ser más lento que la pantalla de datos en tiempo real de Maestro+.
 
+
+Antes de configurarse, la integración comprueba que al menos un coordinador de origen informe de una última actualización correcta, sin forzar otra petición a la nube. Si todas han fallado, la configuración muestra un error y las entradas existentes reintentan el inicio.
+
 ## Limitaciones conocidas
 
 - Es un proyecto comunitario independiente, no una integración oficial de MCZ.
