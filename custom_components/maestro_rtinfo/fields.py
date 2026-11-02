@@ -5,11 +5,21 @@ import re
 # Network identifiers and account/device credentials are not telemetry.
 PRIVATE = re.compile(r"password|passwd|pwd|secret|token|credential|ssid|mac_wifi|(?:^|_)serial|(?:^|_)sn$|unique.?code", re.I)
 LABELS = {
+    "pos_ric_flu": ("Receta activo", None, None),
+    "pos_ric_pel": ("Receta pellet", None, None),
+    "mod_ada_on": ("Receta modo de adaptación", None, None),
+    "pul_brac": ("Matic", None, None),
+    "att_eco": ("Start/Stop", None, None),
+    "ingr_amb": ("T.EXT", None, None),
+    "sens_liv_pellet": ("Sensor de nivel de pellet", None, None),
+    "adaptive_on": ("Modo de adaptación activo", None, None),
     "potenza_att": ("Potencia activa", None, None),
     "potenza_counter": ("Duración de la potencia activa", None, None),
     "t_dur_pul": ("Duración prevista de limpieza del brasero", "s", None),
     "set_pot_man": ("Nivel de potencia manual seleccionado", None, None),
-    "pressione": ("Presión", None, None),
+    "pressione": ("Activo real", None, None),
+    "pressione_imp": ("Activo establecido", None, None),
+    "t_int_pul": ("Tiempo restante hasta limpieza del brasero", "s", None),
     "state": ("Estado de la estufa", None, None),
     "state_duration": ("Duración del estado", None, None),
     "mode": ("Modo de funcionamiento", None, None),
