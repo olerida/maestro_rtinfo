@@ -1,15 +1,15 @@
 {
   "domain": "maestro_rtinfo",
   "name": "Maestro MCZ Extra Sensors",
-  "version": "0.2.0",
+  "codeowners": [
+    "@olerida"
+  ],
   "config_flow": true,
   "dependencies": [
     "maestro_mcz"
   ],
   "documentation": "https://github.com/olerida/maestro_rtinfo",
   "iot_class": "cloud_polling",
-  "codeowners": [
-    "@olerida"
-  ],
-  "issue_tracker": "https://github.com/olerida/maestro_rtinfo/issues"
+  "issue_tracker": "https://github.com/olerida/maestro_rtinfo/issues",
+  "version": "0.2.0"
 }
