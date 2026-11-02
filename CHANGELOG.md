@@ -1,9 +1,9 @@
 # Changelog
 
-## Unreleased security improvements
+## 0.2.6
 
 - Pin CI actions to immutable commits.
-- Restrict published telemetry to reviewed fields.
+- Restrict published telemetry to explicitly reviewed fields. Previously registered unreviewed entities may become unavailable.
 
 
 ## 0.2.5
