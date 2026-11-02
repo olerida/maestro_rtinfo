@@ -23,6 +23,8 @@ La integración se ha instalado en Home Assistant 2026.10.4 con Maestro MCZ 0.6.
 
 ### HACS
 
+[![Open this integration in Home Assistant Marketplace](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=olerida&repository=maestro_rtinfo&category=integration)
+
 1. En HACS, abre **Integraciones** y selecciona **Repositorios personalizados** en el menú.
 2. Añade `https://github.com/olerida/maestro_rtinfo` con la categoría **Integración**.
 3. Busca **Maestro MCZ Extra Sensors** en HACS y pulsa **Descargar**.
