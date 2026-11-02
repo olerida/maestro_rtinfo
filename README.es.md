@@ -30,7 +30,11 @@ La integración se ha instalado en Home Assistant 2026.10.4 con Maestro MCZ 0.6.
 3. Busca **Maestro MCZ Extra Sensors** en HACS y pulsa **Descargar**.
 4. Reinicia Home Assistant.
 
-Es un repositorio personalizado; no está incluido en el catálogo predeterminado de HACS.
+Es un repositorio personalizado; no está incluido en el catálogo predeterminado de HACS. La versión actual es beta; selecciona **Mostrar versiones beta** en HACS si no aparece.
+
+## Actualización
+
+Instala la actualización disponible en HACS y reinicia Home Assistant. Si la versión beta no aparece, activa **Mostrar versiones beta** para este repositorio en HACS. Se conservan los ajustes de las entidades existentes.
 
 ## Configuración
 
@@ -46,6 +50,8 @@ La integración descubre los valores simples disponibles en `State` y `Status` d
 
 - **Sensores:** fase de funcionamiento y potencia activa, temperaturas de humos y placa, velocidades solicitadas y reales del extractor y del sinfín, datos de limpieza y valores de recetas.
 - **Sensores binarios:** campos disponibles de tipo activado/desactivado, como el modo de adaptación y otras opciones de funcionamiento.
+
+Las entidades identificadas tienen iconos acordes con su función; los campos no documentados usan un icono neutral. Puedes personalizar el icono de cada entidad en Home Assistant.
 
 La integración no ofrece controles ni envía órdenes a la estufa. Procura no duplicar los campos que ya tiene registrados Maestro MCZ. Algunos conservan su nombre técnico porque no se ha confirmado su significado. Consulta el [inventario de campos](docs/inventario-campos.md), basado en la investigación de una estufa.
 

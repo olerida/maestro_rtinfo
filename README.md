@@ -30,7 +30,11 @@ The integration has been installed on Home Assistant 2026.10.4 with Maestro MCZ 
 3. Find **Maestro MCZ Extra Sensors** in HACS and select **Download**.
 4. Restart Home Assistant.
 
-This is a custom repository; it is not included in the default HACS catalog.
+This is a custom repository; it is not included in the default HACS catalog. The current release is a beta; select **Show beta versions** in HACS if it is not listed.
+
+## Updating
+
+Install the available update from HACS and restart Home Assistant. If the beta release is not listed, enable **Show beta versions** for this repository in HACS. Existing entity settings are preserved.
 
 ## Configuration
 
@@ -46,6 +50,8 @@ The integration discovers scalar values available in the original integration's 
 
 - **Sensors:** operating phase and active power, exhaust and board temperatures, requested and actual exhaust fan and auger speeds, cleaning information, and recipe values.
 - **Binary sensors:** available on/off status fields, such as the adaptive mode and other operating options.
+
+Identified entities have icons appropriate to their function; undocumented fields use a neutral icon. You can customize an entity icon in Home Assistant.
 
 The integration does not provide controls and does not send commands to the stove. Fields already registered by Maestro MCZ are not intentionally duplicated. Some fields use technical names because their meaning has not been verified. See the [field inventory](docs/inventario-campos.md) for the investigation based on one stove.
 
