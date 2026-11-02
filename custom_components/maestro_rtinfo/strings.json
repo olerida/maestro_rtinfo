@@ -1,1 +1,276 @@
-{"title":"Maestro MCZ - Información adicional","config":{"step":{"user":{"title":"Cuenta Maestro MCZ","description":"Selecciona la integración existente que suministra los datos.","data":{"source_entry_id":"Integración Maestro MCZ"}}},"abort":{"no_source":"No hay cuentas Maestro MCZ disponibles o ya están añadidas.","already_configured":"Esta cuenta ya está configurada."}}}
+{
+  "title": "Maestro MCZ Extra Sensors",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Maestro MCZ account",
+        "description": "Select the existing integration that supplies the data.",
+        "data": {
+          "source_entry_id": "Maestro MCZ integration"
+        }
+      }
+    },
+    "abort": {
+      "no_source": "No available Maestro MCZ accounts, or all are already added.",
+      "already_configured": "This account is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "pos_ric_flu": {
+        "name": "Active recipe"
+      },
+      "pos_ric_pel": {
+        "name": "Pellet recipe"
+      },
+      "mod_ada_on": {
+        "name": "Adaptive mode recipe"
+      },
+      "pul_brac": {
+        "name": "Matic"
+      },
+      "att_eco": {
+        "name": "Start/Stop"
+      },
+      "ingr_amb": {
+        "name": "T.EXT"
+      },
+      "sens_liv_pellet": {
+        "name": "Pellet level sensor"
+      },
+      "adaptive_on": {
+        "name": "Adaptive mode active"
+      },
+      "potenza_att": {
+        "name": "Active power"
+      },
+      "potenza_counter": {
+        "name": "Active power duration"
+      },
+      "t_dur_pul": {
+        "name": "Expected brazier cleaning duration"
+      },
+      "set_pot_man": {
+        "name": "Selected manual power level"
+      },
+      "pressione": {
+        "name": "Active actual"
+      },
+      "pressione_imp": {
+        "name": "Active setpoint"
+      },
+      "t_int_pul": {
+        "name": "Time until brazier cleaning"
+      },
+      "state": {
+        "name": "Stove state"
+      },
+      "state_duration": {
+        "name": "State duration"
+      },
+      "mode": {
+        "name": "Operating mode"
+      },
+      "is_connected": {
+        "name": "Stove connected"
+      },
+      "is_in_error": {
+        "name": "Stove error"
+      },
+      "last_alarm": {
+        "name": "Last alarm"
+      },
+      "crono_enabled": {
+        "name": "Timer enabled"
+      },
+      "silent_enabled": {
+        "name": "Silent mode enabled"
+      },
+      "sleep_enabled": {
+        "name": "Sleep mode enabled"
+      },
+      "clean_in_prog": {
+        "name": "Cleaning in progress"
+      },
+      "clean_air_in_prog": {
+        "name": "Air cleaning in progress"
+      },
+      "ore_prox_manut": {
+        "name": "Hours until next maintenance"
+      },
+      "index_vel_v1": {
+        "name": "Fan level 1"
+      },
+      "index_vel_v2": {
+        "name": "Fan level 2"
+      },
+      "index_vel_v3": {
+        "name": "Fan level 3"
+      },
+      "set_amb1": {
+        "name": "Target room temperature 1"
+      },
+      "set_amb2": {
+        "name": "Target room temperature 2"
+      },
+      "set_amb3": {
+        "name": "Target room temperature 3"
+      },
+      "temp_fumi": {
+        "name": "Exhaust temperature"
+      },
+      "temp_scheda": {
+        "name": "Board temperature"
+      },
+      "vel_real_ventola_fumi": {
+        "name": "Actual exhaust fan speed"
+      },
+      "vel_imp_ventola_fumi": {
+        "name": "Requested exhaust fan speed"
+      },
+      "vel_real_coclea": {
+        "name": "Actual auger speed"
+      },
+      "vel_imp_coclea": {
+        "name": "Requested auger speed"
+      },
+      "temp_caldaia": {
+        "name": "Boiler temperature"
+      },
+      "temp_bollitore": {
+        "name": "Hot water tank temperature"
+      },
+      "temp_puffer": {
+        "name": "Buffer tank temperature"
+      }
+    },
+    "binary_sensor": {
+      "pos_ric_flu": {
+        "name": "Active recipe"
+      },
+      "pos_ric_pel": {
+        "name": "Pellet recipe"
+      },
+      "mod_ada_on": {
+        "name": "Adaptive mode recipe"
+      },
+      "pul_brac": {
+        "name": "Matic"
+      },
+      "att_eco": {
+        "name": "Start/Stop"
+      },
+      "ingr_amb": {
+        "name": "T.EXT"
+      },
+      "sens_liv_pellet": {
+        "name": "Pellet level sensor"
+      },
+      "adaptive_on": {
+        "name": "Adaptive mode active"
+      },
+      "potenza_att": {
+        "name": "Active power"
+      },
+      "potenza_counter": {
+        "name": "Active power duration"
+      },
+      "t_dur_pul": {
+        "name": "Expected brazier cleaning duration"
+      },
+      "set_pot_man": {
+        "name": "Selected manual power level"
+      },
+      "pressione": {
+        "name": "Active actual"
+      },
+      "pressione_imp": {
+        "name": "Active setpoint"
+      },
+      "t_int_pul": {
+        "name": "Time until brazier cleaning"
+      },
+      "state": {
+        "name": "Stove state"
+      },
+      "state_duration": {
+        "name": "State duration"
+      },
+      "mode": {
+        "name": "Operating mode"
+      },
+      "is_connected": {
+        "name": "Stove connected"
+      },
+      "is_in_error": {
+        "name": "Stove error"
+      },
+      "last_alarm": {
+        "name": "Last alarm"
+      },
+      "crono_enabled": {
+        "name": "Timer enabled"
+      },
+      "silent_enabled": {
+        "name": "Silent mode enabled"
+      },
+      "sleep_enabled": {
+        "name": "Sleep mode enabled"
+      },
+      "clean_in_prog": {
+        "name": "Cleaning in progress"
+      },
+      "clean_air_in_prog": {
+        "name": "Air cleaning in progress"
+      },
+      "ore_prox_manut": {
+        "name": "Hours until next maintenance"
+      },
+      "index_vel_v1": {
+        "name": "Fan level 1"
+      },
+      "index_vel_v2": {
+        "name": "Fan level 2"
+      },
+      "index_vel_v3": {
+        "name": "Fan level 3"
+      },
+      "set_amb1": {
+        "name": "Target room temperature 1"
+      },
+      "set_amb2": {
+        "name": "Target room temperature 2"
+      },
+      "set_amb3": {
+        "name": "Target room temperature 3"
+      },
+      "temp_fumi": {
+        "name": "Exhaust temperature"
+      },
+      "temp_scheda": {
+        "name": "Board temperature"
+      },
+      "vel_real_ventola_fumi": {
+        "name": "Actual exhaust fan speed"
+      },
+      "vel_imp_ventola_fumi": {
+        "name": "Requested exhaust fan speed"
+      },
+      "vel_real_coclea": {
+        "name": "Actual auger speed"
+      },
+      "vel_imp_coclea": {
+        "name": "Requested auger speed"
+      },
+      "temp_caldaia": {
+        "name": "Boiler temperature"
+      },
+      "temp_bollitore": {
+        "name": "Hot water tank temperature"
+      },
+      "temp_puffer": {
+        "name": "Buffer tank temperature"
+      }
+    }
+  }
+}

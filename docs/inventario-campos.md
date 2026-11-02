@@ -1,4 +1,4 @@
-# Inventario de campos de Calentito
+# Inventario de campos de la estufa
 
 Campos no privados con valor en el diagnóstico del 2 de noviembre. «Sin confirmar» significa que aún no se ha demostrado su correspondencia con una etiqueta o unidad. Las relaciones confirmadas por código corresponden a la app 5.6.9 ARM64; el diagnóstico usa `mode` para el modo activo.
 

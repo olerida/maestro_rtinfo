@@ -4,6 +4,20 @@ import re
 
 # Network identifiers and account/device credentials are not telemetry.
 PRIVATE = re.compile(r"password|passwd|pwd|secret|token|credential|ssid|mac_wifi|(?:^|_)serial|(?:^|_)sn$|unique.?code", re.I)
+# Fields supported by app code, the existing integration, or observed device data.
+# A label alone does not make an undocumented field confirmed.
+CONFIRMED_FIELDS = frozenset({
+    "pos_ric_flu", "pos_ric_pel", "mod_ada_on", "pul_brac", "att_eco",
+    "ingr_amb", "sens_liv_pellet", "adaptive_on", "potenza_att",
+    "potenza_counter", "t_dur_pul", "t_int_pul", "set_pot_man", "pressione",
+    "pressione_imp", "state", "state_duration", "mode", "is_connected",
+    "is_in_error", "last_alarm", "crono_enabled", "silent_enabled",
+    "sleep_enabled", "clean_in_prog", "clean_air_in_prog", "ore_prox_manut",
+    "index_vel_v1", "index_vel_v2", "index_vel_v3", "set_amb1", "set_amb2",
+    "set_amb3", "temp_fumi", "temp_scheda", "vel_real_ventola_fumi",
+    "vel_imp_ventola_fumi", "vel_real_coclea", "vel_imp_coclea",
+    "temp_caldaia", "temp_bollitore", "temp_puffer",
+})
 LABELS = {
     "pos_ric_flu": ("Receta activo", None, None),
     "pos_ric_pel": ("Receta pellet", None, None),

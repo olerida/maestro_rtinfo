@@ -28,6 +28,19 @@ class FieldTests(unittest.TestCase):
     def test_unavailable_values_not_exposed(self):
         self.assertEqual(mod.values({'no': None, 'nested': [1], 'long': 'x' * 256}), {})
 
+class PublishedMetadataTests(unittest.TestCase):
+    def test_unconfirmed_wifi_is_disabled_by_default(self):
+        self.assertNotIn('wifi_status', mod.CONFIRMED_FIELDS)
+        self.assertIn('potenza_att', mod.CONFIRMED_FIELDS)
+
+    def test_all_named_fields_have_bilingual_entity_translations(self):
+        import json
+        root = path.parent
+        for lang in ('en', 'es'):
+            translations = json.loads((root / 'translations' / f'{lang}.json').read_text())
+            for domain in ('sensor', 'binary_sensor'):
+                self.assertEqual(set(translations['entity'][domain]), set(mod.LABELS))
+
 
 if __name__ == '__main__':
     unittest.main()

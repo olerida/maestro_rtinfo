@@ -20,5 +20,5 @@ class MaestroRtinfoConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             source = user_input["source_entry_id"]
             await self.async_set_unique_id(source)
             self._abort_if_unique_id_configured()
-            return self.async_create_entry(title=f"Maestro MCZ adicional - {entries[source]}", data={"source_entry_id": source})
+            return self.async_create_entry(title=entries[source], data={"source_entry_id": source})
         return self.async_show_form(step_id="user", data_schema=vol.Schema({vol.Required("source_entry_id"): vol.In(entries)}))

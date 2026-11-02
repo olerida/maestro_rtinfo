@@ -1,1 +1,276 @@
-{"title":"Maestro MCZ - Información adicional","config":{"step":{"user":{"title":"Cuenta Maestro MCZ","description":"Selecciona la integración existente que suministra los datos.","data":{"source_entry_id":"Integración Maestro MCZ"}}},"abort":{"no_source":"No hay cuentas Maestro MCZ disponibles o ya están añadidas.","already_configured":"Esta cuenta ya está configurada."}}}
+{
+  "title": "Maestro MCZ - Sensores adicionales",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Cuenta Maestro MCZ",
+        "description": "Selecciona la integración existente que suministra los datos.",
+        "data": {
+          "source_entry_id": "Integración Maestro MCZ"
+        }
+      }
+    },
+    "abort": {
+      "no_source": "No hay cuentas Maestro MCZ disponibles o ya están añadidas.",
+      "already_configured": "Esta cuenta ya está configurada."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "pos_ric_flu": {
+        "name": "Receta activo"
+      },
+      "pos_ric_pel": {
+        "name": "Receta pellet"
+      },
+      "mod_ada_on": {
+        "name": "Receta modo de adaptación"
+      },
+      "pul_brac": {
+        "name": "Matic"
+      },
+      "att_eco": {
+        "name": "Start/Stop"
+      },
+      "ingr_amb": {
+        "name": "T.EXT"
+      },
+      "sens_liv_pellet": {
+        "name": "Sensor de nivel de pellet"
+      },
+      "adaptive_on": {
+        "name": "Modo de adaptación activo"
+      },
+      "potenza_att": {
+        "name": "Potencia activa"
+      },
+      "potenza_counter": {
+        "name": "Duración de la potencia activa"
+      },
+      "t_dur_pul": {
+        "name": "Duración prevista de limpieza del brasero"
+      },
+      "set_pot_man": {
+        "name": "Nivel de potencia manual seleccionado"
+      },
+      "pressione": {
+        "name": "Activo real"
+      },
+      "pressione_imp": {
+        "name": "Activo establecido"
+      },
+      "t_int_pul": {
+        "name": "Tiempo restante hasta limpieza del brasero"
+      },
+      "state": {
+        "name": "Estado de la estufa"
+      },
+      "state_duration": {
+        "name": "Duración del estado"
+      },
+      "mode": {
+        "name": "Modo de funcionamiento"
+      },
+      "is_connected": {
+        "name": "Estufa conectada"
+      },
+      "is_in_error": {
+        "name": "Error de la estufa"
+      },
+      "last_alarm": {
+        "name": "Última alarma"
+      },
+      "crono_enabled": {
+        "name": "Programación horaria activada"
+      },
+      "silent_enabled": {
+        "name": "Modo silencioso activado"
+      },
+      "sleep_enabled": {
+        "name": "Modo descanso activado"
+      },
+      "clean_in_prog": {
+        "name": "Limpieza en curso"
+      },
+      "clean_air_in_prog": {
+        "name": "Limpieza del aire en curso"
+      },
+      "ore_prox_manut": {
+        "name": "Horas hasta el próximo mantenimiento"
+      },
+      "index_vel_v1": {
+        "name": "Nivel de ventilación 1"
+      },
+      "index_vel_v2": {
+        "name": "Nivel de ventilación 2"
+      },
+      "index_vel_v3": {
+        "name": "Nivel de ventilación 3"
+      },
+      "set_amb1": {
+        "name": "Temperatura ambiente objetivo 1"
+      },
+      "set_amb2": {
+        "name": "Temperatura ambiente objetivo 2"
+      },
+      "set_amb3": {
+        "name": "Temperatura ambiente objetivo 3"
+      },
+      "temp_fumi": {
+        "name": "Temperatura de humos"
+      },
+      "temp_scheda": {
+        "name": "Temperatura de la placa"
+      },
+      "vel_real_ventola_fumi": {
+        "name": "Velocidad real del extractor de humos"
+      },
+      "vel_imp_ventola_fumi": {
+        "name": "Velocidad solicitada del extractor de humos"
+      },
+      "vel_real_coclea": {
+        "name": "Velocidad real del sinfín"
+      },
+      "vel_imp_coclea": {
+        "name": "Velocidad solicitada del sinfín"
+      },
+      "temp_caldaia": {
+        "name": "Temperatura de la caldera"
+      },
+      "temp_bollitore": {
+        "name": "Temperatura del acumulador"
+      },
+      "temp_puffer": {
+        "name": "Temperatura del depósito de inercia"
+      }
+    },
+    "binary_sensor": {
+      "pos_ric_flu": {
+        "name": "Receta activo"
+      },
+      "pos_ric_pel": {
+        "name": "Receta pellet"
+      },
+      "mod_ada_on": {
+        "name": "Receta modo de adaptación"
+      },
+      "pul_brac": {
+        "name": "Matic"
+      },
+      "att_eco": {
+        "name": "Start/Stop"
+      },
+      "ingr_amb": {
+        "name": "T.EXT"
+      },
+      "sens_liv_pellet": {
+        "name": "Sensor de nivel de pellet"
+      },
+      "adaptive_on": {
+        "name": "Modo de adaptación activo"
+      },
+      "potenza_att": {
+        "name": "Potencia activa"
+      },
+      "potenza_counter": {
+        "name": "Duración de la potencia activa"
+      },
+      "t_dur_pul": {
+        "name": "Duración prevista de limpieza del brasero"
+      },
+      "set_pot_man": {
+        "name": "Nivel de potencia manual seleccionado"
+      },
+      "pressione": {
+        "name": "Activo real"
+      },
+      "pressione_imp": {
+        "name": "Activo establecido"
+      },
+      "t_int_pul": {
+        "name": "Tiempo restante hasta limpieza del brasero"
+      },
+      "state": {
+        "name": "Estado de la estufa"
+      },
+      "state_duration": {
+        "name": "Duración del estado"
+      },
+      "mode": {
+        "name": "Modo de funcionamiento"
+      },
+      "is_connected": {
+        "name": "Estufa conectada"
+      },
+      "is_in_error": {
+        "name": "Error de la estufa"
+      },
+      "last_alarm": {
+        "name": "Última alarma"
+      },
+      "crono_enabled": {
+        "name": "Programación horaria activada"
+      },
+      "silent_enabled": {
+        "name": "Modo silencioso activado"
+      },
+      "sleep_enabled": {
+        "name": "Modo descanso activado"
+      },
+      "clean_in_prog": {
+        "name": "Limpieza en curso"
+      },
+      "clean_air_in_prog": {
+        "name": "Limpieza del aire en curso"
+      },
+      "ore_prox_manut": {
+        "name": "Horas hasta el próximo mantenimiento"
+      },
+      "index_vel_v1": {
+        "name": "Nivel de ventilación 1"
+      },
+      "index_vel_v2": {
+        "name": "Nivel de ventilación 2"
+      },
+      "index_vel_v3": {
+        "name": "Nivel de ventilación 3"
+      },
+      "set_amb1": {
+        "name": "Temperatura ambiente objetivo 1"
+      },
+      "set_amb2": {
+        "name": "Temperatura ambiente objetivo 2"
+      },
+      "set_amb3": {
+        "name": "Temperatura ambiente objetivo 3"
+      },
+      "temp_fumi": {
+        "name": "Temperatura de humos"
+      },
+      "temp_scheda": {
+        "name": "Temperatura de la placa"
+      },
+      "vel_real_ventola_fumi": {
+        "name": "Velocidad real del extractor de humos"
+      },
+      "vel_imp_ventola_fumi": {
+        "name": "Velocidad solicitada del extractor de humos"
+      },
+      "vel_real_coclea": {
+        "name": "Velocidad real del sinfín"
+      },
+      "vel_imp_coclea": {
+        "name": "Velocidad solicitada del sinfín"
+      },
+      "temp_caldaia": {
+        "name": "Temperatura de la caldera"
+      },
+      "temp_bollitore": {
+        "name": "Temperatura del acumulador"
+      },
+      "temp_puffer": {
+        "name": "Temperatura del depósito de inercia"
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ from homeassistant.helpers import entity_registry as er
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from .const import DOMAIN, SOURCE_DOMAIN
-from .fields import LABELS, snapshot
+from .fields import CONFIRMED_FIELDS, LABELS, snapshot
 
 
 async def setup_sensors(hass, entry, async_add_entities, entity_class, boolean):
@@ -41,7 +41,11 @@ class ExtraEntity(CoordinatorEntity):
         self._stove = stove
         self._key = key
         self._attr_unique_id = f"{stove.UniqueCode}-{key}"
-        self._attr_name = LABELS.get(key, (key.replace('_', ' ').capitalize(), None, None))[0]
+        self._attr_entity_registry_enabled_default = key in CONFIRMED_FIELDS
+        if key in LABELS:
+            self._attr_translation_key = key
+        else:
+            self._attr_name = key
         if hasattr(coordinator, "get_device_info"):
             self._attr_device_info = coordinator.get_device_info()
         else:
