@@ -17,13 +17,16 @@ class FieldTests(unittest.TestCase):
             pwd_wifi: str = 'secret'
             unknown_fields: object = None
         data = State(unknown_fields={'new_sensor': 17, 'auth_token': 'secret', 'empty': None})
-        self.assertEqual(mod.values(data), {'temp_fumi': 22, 'new_sensor': 17})
+        self.assertEqual(mod.values(data), {'temp_fumi': 22})
 
     def test_state_has_priority_and_false_is_kept(self):
         class Stove:
-            Status = {'value': 3, 'flag': True}
-            State = {'value': 0, 'flag': False}
-        self.assertEqual(mod.snapshot(Stove()), {'value': 0, 'flag': False})
+            Status = {'potenza_att': 3, 'adaptive_on': True}
+            State = {'potenza_att': 0, 'adaptive_on': False}
+        self.assertEqual(mod.snapshot(Stove()), {'potenza_att': 0, 'adaptive_on': False})
+
+    def test_unrecognized_secret_and_unknown_field_are_not_exposed(self):
+        self.assertEqual(mod.values({'api_key': 'sensitive', 'mystery': 'sensitive', 'temp_fumi': 22}), {'temp_fumi': 22})
 
     def test_unavailable_values_not_exposed(self):
         self.assertEqual(mod.values({'no': None, 'nested': [1], 'long': 'x' * 256}), {})

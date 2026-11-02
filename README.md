@@ -60,7 +60,7 @@ The integration discovers scalar values available in the original integration's 
 
 Identified entities have icons appropriate to their function; undocumented fields use a neutral icon. You can customize an entity icon in Home Assistant.
 
-The integration does not provide controls and does not send commands to the stove. Fields already registered by Maestro MCZ are not intentionally duplicated. Some fields use technical names because their meaning has not been verified. See the [field inventory](docs/inventario-campos.md) for the investigation based on one stove.
+The integration does not provide controls and does not send commands to the stove. Fields already registered by Maestro MCZ are not intentionally duplicated. Some reviewed fields use technical names because their meaning has not been verified. See the [field inventory](docs/inventario-campos.md) for the investigation based on one stove.
 
 ### Enable unconfirmed entities
 
@@ -96,3 +96,6 @@ Open **Settings** → **Devices & services**, select **Maestro MCZ Extra Sensors
 ## License
 
 The project code is available under the [MIT License](LICENSE). The Maestro+ icon and MCZ trademarks belong to their respective owner and are not covered by the MIT license.
+
+
+Security: only explicitly reviewed telemetry fields are exposed; unknown fields are ignored. Previously registered unknown entities may become unavailable.

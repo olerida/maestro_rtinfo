@@ -53,14 +53,14 @@ No necesitas introducir de nuevo tus credenciales de MCZ. Puedes repetir la conf
 
 ## Funciones compatibles
 
-La integración descubre los valores simples disponibles en `State` y `Status` de la integración original. Según la estufa y los datos recibidos, puede ofrecer:
+La integración descubre los valores simples revisados disponibles en `State` y `Status` de la integración original. Según la estufa y los datos recibidos, puede ofrecer:
 
 - **Sensores:** fase de funcionamiento y potencia activa, temperaturas de humos y placa, velocidades solicitadas y reales del extractor y del sinfín, datos de limpieza y valores de recetas.
 - **Sensores binarios:** campos disponibles de tipo activado/desactivado, como el modo de adaptación y otras opciones de funcionamiento.
 
 Las entidades identificadas tienen iconos acordes con su función; los campos no documentados usan un icono neutral. Puedes personalizar el icono de cada entidad en Home Assistant.
 
-La integración no ofrece controles ni envía órdenes a la estufa. Procura no duplicar los campos que ya tiene registrados Maestro MCZ. Algunos conservan su nombre técnico porque no se ha confirmado su significado. Consulta el [inventario de campos](docs/inventario-campos.md), basado en la investigación de una estufa.
+La integración no ofrece controles ni envía órdenes a la estufa. Procura no duplicar los campos que ya tiene registrados Maestro MCZ. Algunos campos revisados conservan su nombre técnico porque no se ha confirmado su significado. Consulta el [inventario de campos](docs/inventario-campos.md), basado en la investigación de una estufa.
 
 ### Habilitar entidades no confirmadas
 
@@ -96,3 +96,6 @@ Abre **Ajustes** → **Dispositivos y servicios**, selecciona **Maestro MCZ Extr
 ## Licencia
 
 El código del proyecto se distribuye bajo la [licencia MIT](LICENSE). El icono Maestro+ y las marcas MCZ pertenecen a su titular y no están incluidos en la licencia MIT.
+
+
+Seguridad: solo se exponen los campos de telemetría revisados explícitamente; se ignoran los campos desconocidos. Las entidades desconocidas ya registradas pueden quedar no disponibles.

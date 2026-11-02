@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased security improvements
+
+- Pin CI actions to immutable commits.
+- Restrict published telemetry to reviewed fields.
+
+
 ## 0.2.5
 
 - Check the source coordinator’s most recent update before setup, without making extra cloud requests; retry when all updates failed.

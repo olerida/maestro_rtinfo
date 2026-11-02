@@ -31,7 +31,7 @@ async def test_entities_follow_source_updates(hass):
     unknown_id = registry.async_get_entity_id("sensor", "maestro_rtinfo", "test-stove-unconfirmed_value")
     assert hass.states.get(power_id).state == "2"
     assert hass.states.get(adaptive_id).state == "off"
-    assert registry.async_get(unknown_id).disabled_by is er.RegistryEntryDisabler.INTEGRATION
+    assert unknown_id is None
     stove.State["potenza_att"] = 4
     stove.State["adaptive_on"] = True
     coordinator.async_set_updated_data({})
