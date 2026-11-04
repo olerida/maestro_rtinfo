@@ -1,6 +1,6 @@
 # Maestro MCZ Extra Sensors
 
-<img src="custom_components/maestro_rtinfo/brand/icon.png" alt="Maestro MCZ Extra Sensors" width="128">
+<img src="https://raw.githubusercontent.com/olerida/maestro_rtinfo/main/custom_components/maestro_rtinfo/brand/icon.png" alt="Maestro MCZ Extra Sensors" width="128">
 
 [Español](README.es.md)
 

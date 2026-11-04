@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.7
+
+- Fix the README image URL when displayed in HACS.
+
 ## 0.2.6
 
 - Pin CI actions to immutable commits.
